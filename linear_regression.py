@@ -62,7 +62,7 @@ y_filtered = y[outliers != -1]
 X_train, X_test, y_train, y_test = train_test_split(X_filtered, y_filtered, test_size=0.2, random_state=42)
 
 # Определение модели и параметров для GridSearch
-model = {
+models = {
     'LinearRegression': {
         'model': Pipeline(steps=[('preprocessor', preprocessor),
                                  ('regressor', LinearRegression())]),
